@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Priyankaaa! 💫</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-pacifico {
+            font-family: 'Pacifico', cursive;
+        }
+
+        .animated-gradient-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .circles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .circles-container li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            animation: animate-circles 25s linear infinite;
+            bottom: -150px;
+            border-radius: 50%;
+        }
+
+        .circles-container li:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
+        .circles-container li:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
+        .circles-container li:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
+        .circles-container li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
+        .circles-container li:nth-child(5) { left: 65%; width: 20px; height: 20px; animation-delay: 0s; }
+        .circles-container li:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
+        .circles-container li:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
+        .circles-container li:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
+        .circles-container li:nth-child(9) { left: 20%; width: 15px; height: 15px; animation-delay: 2s; animation-duration: 35s; }
+        .circles-container li:nth-child(10) { left: 85%; width: 150px; height: 150px; animation-delay: 0s; animation-duration: 11s; }
+
+        @keyframes animate-circles {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+         
+        .animated-gradient-text {
+            background: linear-gradient(-45deg, #ffd700, #ff69b4, #00ffff, #adff2f);
+            background-size: 300% 300%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: text-gradient-animation 8s ease infinite;
+        }
+
+        @keyframes text-gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .balloon-container {
+            position: fixed;
+            bottom: -200px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            z-index: 10;
+        }
+
+        .balloon {
+            width: 60px;
+            height: 75px;
+            background-color: rgba(244, 67, 54, 0.8);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            position: relative;
+            animation: float-up 10s linear infinite;
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .balloon:nth-child(2) { background-color: rgba(33, 150, 243, 0.8); animation-duration: 13s; animation-delay: 2s; }
+        .balloon:nth-child(3) { background-color: rgba(76, 175, 80, 0.8); animation-duration: 15s; animation-delay: 1s; }
+        .balloon:nth-child(4) { background-color: rgba(255, 235, 59, 0.8); animation-duration: 12s; animation-delay: 4s; }
+        .balloon:nth-child(5) { background-color: rgba(156, 39, 176, 0.8); animation-duration: 14s; animation-delay: 3s; }
+        .balloon:nth-child(6) { background-color: rgba(255, 152, 0, 0.8); animation-duration: 11s; animation-delay: 5s; }
+
+
+        @keyframes float-up {
+            0% { transform: translateY(0) rotate(0); opacity: 1; }
+            100% { transform: translateY(-120vh) rotate(25deg); opacity: 0; }
+        }
+        
+        .star-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: default;
+        }
+
+        .star {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px #ff69b4;
+            animation: pulse-star 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse-star {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        .star-label {
+            margin-top: 12px;
+            color: white;
+            font-weight: 600;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .star-container:hover .star-label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    </style>
+</head>
+<body class="bg-gray-900">
+
+    <div class="animated-gradient-bg"></div>
+    <ul class="circles-container">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+    <div class="balloon-container">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <main class="min-h-screen w-full flex flex-col items-center justify-center p-4 text-center overflow-hidden">
+        
+        <h1 class="font-pacifico text-5xl md:text-7xl lg:text-8xl font-bold mb-8 text-white drop-shadow-lg animated-gradient-text">
+            Happy Birthday Priyankaaa💫
+        </h1>
+
+        <div class="glass-card w-full max-w-2xl rounded-2xl p-6 md:p-8 text-white mb-10 z-20">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-yellow-200 font-pacifico">A Message For You Shinning Star💫</h2>
+            <p class="text-base md:text-lg">
+                May your life bloom brighter than a garden of colors, your dreams soar higher than the sky, and your heart always dance with courage and joy. 🌟💫 This year, may every challenge turn into an opportunity, every wish turn into a reality, and every step lead you closer to the greatness you’re destined for. Keep glowing, keep inspiring, and keep being the amazing YOU!🌈
+            </p>
+        </div>
+
+        <div class="w-full max-w-4xl z-20">
+            <h3 class="font-pacifico text-3xl text-white drop-shadow-lg mb-6">A Constellation for You</h3>
+            <div class="glass-card rounded-2xl p-6 md:p-8">
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 place-items-center">
+                    
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Kindness</span>
+                    </div>
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Strength</span>
+                    </div>
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Laughter</span>
+                    </div>
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Creativity</span>
+                    </div>
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Wisdom</span>
+                    </div>
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <span class="star-label">Joy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
+
